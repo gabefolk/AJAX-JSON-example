@@ -1,0 +1,291 @@
+* {box-sizing: border-box;}
+html{
+    height:100%;
+}
+body {
+    margin:0;
+    min-height: 100%;
+    font-family: 'Poppins'
+}
+h1{
+    text-align: center;
+    margin:10px;
+}
+h2{
+    margin-top:0;
+}
+@media screen and (max-width: 700px){
+    h1{font-size:1.5em;}
+}
+
+.nav_item { 
+    text-align: center;
+    padding:10px;
+    width:25%;
+    cursor: pointer;
+}
+.nav_item_collab { 
+    padding:10px;
+}
+a{
+    color:black;
+    text-decoration: none;
+    transition: color 0.5s;   
+}
+a:hover{
+    color:white;
+}
+.hovergray:hover{
+    color:lightgray;
+}
+.hoverblack:hover{
+    color:black;
+}
+.hoverdarkgray:hover{
+    color:gray;
+}
+
+.drop_nav_item{
+    text-align: center;
+    position:relative;  
+}
+
+.flex_left{
+    justify-content: flex-start;
+}
+.flex_right{
+    justify-content: flex-end;
+}
+.flex_evenly{
+    justify-content: space-evenly;
+}
+.flex_space_between{
+    justify-content:space-between;
+}
+.flex_space_around{
+    justify-content:space-around;
+}
+.flex_center{
+    justify-content: center;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.inner_row{
+    display:flex;
+    width: 100%;  
+    justify-content: space-evenly;  
+}
+.bigRow{
+    height:80vh;
+    width:100%;
+}
+@media screen and (max-width: 700px){
+    .bigRow{min-height:95vh;}
+}
+.inner_row_stayrow{
+    display:flex;
+    align-items: center;
+    width: 100%;  
+}
+.row_item { 
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    font-size: 15px;
+    min-height: 45vh;
+}
+
+form{
+    text-align: center;
+}
+
+@media screen and (max-width: 700px){
+    .inner_row{flex-direction: column; justify-content: center; align-items: center;}
+    .row_item{width:90% !important;align-items: center;}
+}
+@media screen and (max-width: 1050px){
+    .crunch{flex-direction: column; justify-content: center;}
+}
+.hiddenItem{
+    opacity:0;
+}
+
+.showLeft{
+    position:relative;
+    animation: fadeInLeft 1.5s;
+}
+@keyframes fadeInLeft {
+    from {opacity:0; left:-2%;}
+    to {opacity:1; left:0;}
+}
+.showRight{
+    position:relative;
+    animation: fadeInRight 1.5s;
+}
+@keyframes fadeInRight {
+    from {opacity:0; right:-2%;}
+    to {opacity:1; right:0;}
+}
+
+.lightgray{
+    background-color: lightgray;
+}
+.lightskyblue{
+    background-color: lightskyblue;
+}
+.lightyellow{
+    background-color: lightyellow;
+}
+.black{
+    background-color: black;
+}
+.lightred{
+    background-color: indianred;
+}
+.white_words{
+    color:white;
+}
+.burlywood{
+    background-color: burlywood;
+}
+
+.center_img{
+    height: 250px;
+    object-fit: cover;
+    border-radius: 3px;
+}
+
+.sagePic{
+    background-image: url("images/Bundle of Sage Smoking.jpg");
+    background-size:cover;
+}
+
+@media screen and (min-width: 700px){
+    .show_small{display:none;}
+}
+@media screen and (max-width: 700px){
+    .show_big{display:none !important;}
+}
+
+.dropdown_content {
+    visibility:hidden;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1;
+    width:100%;
+    height:100%;
+    position: fixed;
+    top: 70px;
+    background-color: #f1f1f1;
+    box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+}
+.inside_dropdown_content {
+    visibility:hidden;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1;
+    width:75%;
+    height:75%;
+    position: fixed;
+    top: 70px;
+    left:35px;
+    background-color: gray;
+    box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+}
+.collabDropdown{
+    visibility: hidden;
+    background-color: #f1f1f1;
+    box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+    text-align: center;
+    border-radius: 5px;
+    z-index: 1;
+    width:60%;
+}
+
+.show_dropdown{
+    visibility:visible;
+    animation: slideUp 0.5s;
+}
+@keyframes slideUp {
+    from   {top:80px;}
+    to  {top:70px;}
+}
+.stop_scroll{
+    overflow:hidden;
+}
+.bigRow_words{
+    position:relative; 
+    top:25%; 
+    left:10%; 
+    width:70%; 
+    color:white; 
+    font-size:2em;
+}
+@media screen and (max-width: 700px){
+    .bigRow_words{top:20%;font-size:1.5em;}
+}
+.bigRow_learnmore{
+    position:relative; 
+    top:35%; 
+    left:10%; 
+    width:fit-content; 
+    padding:10px;
+    cursor: pointer;
+}
+@media screen and (max-width: 700px){
+    .bigRow_learnmore{top:30%;}
+}
+.slide_over{
+    animation: slideOver 1.5s;
+}
+@keyframes slideOver {
+    from {opacity:0;left:0;}
+    to {opacity:1;left:10%;}
+}
+
+.learn_more{
+    padding:5px;
+    cursor: pointer;
+    width:fit-content;
+}
+
+.height105{
+    min-height:105vh;
+}
+.height75{
+    min-height:75vh;
+}
+.height45{
+    min-height:45vh;
+}
+@media screen and (max-width: 700px){
+    .height75{min-height:110vh;}
+}
+
+.drop_width{
+    width:12%;
+}
+
+.center{
+    visibility: hidden;
+    opacity: 0;
+    font-size: 3em;
+    background-color: white;
+    padding: 20px;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes popUp {
+    from {opacity: 1;visibility: visible;}
+    to {opacity: 0;visibility: hidden;}
+}
